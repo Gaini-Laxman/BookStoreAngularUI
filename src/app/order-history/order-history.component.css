@@ -1,0 +1,114 @@
+.order-history-container {
+    padding: 20px;
+  }
+  
+  .order-card {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .order-card ul {
+    padding-left: 20px;
+  }
+  
+  .order-card ul li {
+    list-style-type: none;
+  }
+  
+
+  /* Styling for the Order History Component */
+.order-history-container {
+  padding: 20px;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.order-details {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.cart-items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-items li {
+  margin-bottom: 5px;
+}
+
+.cancel-btn {
+  background-color: #f44336; /* Red color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Styling for the success message */
+.success-message {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Other styling for the order history page */
+  .order-history-container {
+    padding: 20px;
+  }
+  
+  .order-card {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .order-details {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .cart-items ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-items li {
+    margin-bottom: 5px;
+  }
+  
+  .cancel-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #d32f2f;
+  }
+  

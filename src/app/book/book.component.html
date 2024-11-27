@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+  <a href="#"><i class="fa fa-fw fa-book"></i> Books</a>
+
+  <!-- Services Link with Dropdown -->
+  <div class="dropdown">
+    <a href="#" class="dropbtn"><i class="fa fa-fw fa-cogs"></i> Services</a>
+    <div class="dropdown-content">
+      <a href="#">Web Development</a>
+      <a href="#">Mobile Apps</a>
+      <a href="#">SEO Services</a>
+    </div>
+  </div>
+  
+  <a routerLink="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a routerLink="/login"><i class="fa fa-fw fa-user"></i> Login</a>
+
+  <!-- In your Navbar, modify the Signup link -->
+<a routerLink="/signup"><i class="fa fa-fw fa-sign-in"></i> Signup</a>
+
+</div>
+
+
+
+<div class="book-container">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <mat-card *ngFor="let book of books" class="book-card">
+      <img mat-card-image [src]="book.image" alt="book image" width="20" height="20">
+      <!-- <mat-card-title>{{ book.title }}</mat-card-title>
+      <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ book.description }}</p> -->
+        <!-- Show offer price and actual price with strikethrough on actual price -->
+        <p><strong>Offer Price: </strong>
+          <span style="text-decoration: line-through;">₹{{ book.price }}</span>
+          <span style="color: red;"> ₹{{ book.offerPrice }}</span>
+        </p>
+      <!--</mat-card-content> -->
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="addToCart(book)">Add to Cart</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Bookstore. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">gainilaxman&copy;gmail.com</a> |
+        <a href="#">+91 9392291718</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+  </footer>
+  

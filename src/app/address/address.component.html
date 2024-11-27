@@ -1,0 +1,28 @@
+<div class="address-form-container">
+    <h2>Enter Your Address</h2>
+  
+    <form (ngSubmit)="submitAddress()" class="address-form">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" [(ngModel)]="address.name" name="name" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" [(ngModel)]="address.address" name="address" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" [(ngModel)]="address.city" name="city" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" [(ngModel)]="address.zipcode" name="zipcode" required />
+      </div>
+      
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+  

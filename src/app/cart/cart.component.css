@@ -1,0 +1,106 @@
+/* Cart container styling */
+.cart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Cart item card styling */
+  .cart-item-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-card mat-card-header {
+    background-color: #f0f0f0;
+    padding: 16px;
+  }
+  
+  .cart-item-card mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .cart-item-card mat-card-subtitle {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Image styling */
+  .cart-item-image {
+    width: 300px;  /* Set the width */
+    height: 300px; /* Set the height */
+    object-fit: cover;  /* Ensures the image fills the box without distortion */
+    border-radius: 8px;  /* Optional: adds rounded corners to the image */
+  }
+  
+  mat-card-content {
+    padding: 16px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Button and actions */
+  mat-card-actions {
+    padding: 16px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  /* Total Price and Proceed Button Section */
+  .cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  .cart-footer p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cart-footer button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-footer button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Empty cart message */
+  .empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    padding: 20px;
+  }
+  

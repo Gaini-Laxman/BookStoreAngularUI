@@ -1,0 +1,20 @@
+<div class="confirmation-container">
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for your order. Your order is being processed and will be delivered soon!</p>
+  
+    <div *ngIf="userAddress">
+      <h3>Delivery Address:</h3>
+      <p><strong>Name: </strong>{{ userAddress.name }}</p>
+      <p><strong>Address: </strong>{{ userAddress.address }}</p>
+      <p><strong>City: </strong>{{ userAddress.city }}</p>
+      <p><strong>Zipcode: </strong>{{ userAddress.zipcode }}</p>
+    </div>
+  
+    <div *ngIf="totalAmount">
+      <h3>Total Amount:</h3>
+      <p>₹{{ totalAmount }}</p>
+    </div>
+  
+    <button mat-button color="primary" routerLink="/order-history">View Order History</button>
+  </div>
+  

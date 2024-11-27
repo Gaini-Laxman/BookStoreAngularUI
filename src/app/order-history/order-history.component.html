@@ -1,0 +1,34 @@
+<div class="order-history-container">
+    <h2>Order History</h2>
+  
+    <!-- Show the success message if it's set -->
+    <div *ngIf="successMessage" class="success-message">
+      <p>{{ successMessage }}</p>
+    </div>
+  
+    <div *ngFor="let order of orderHistory; let i = index" class="order-card">
+      <div class="order-details">
+        <p><strong>Address:</strong> {{ order.address.name }}, {{ order.address.address }}, {{ order.address.city }} - {{ order.address.zipcode }}</p>
+        <p><strong>Order Date:</strong> {{ order.orderDate }}</p>
+        <p><strong>Total Amount:</strong> ₹{{ order.totalAmount }}</p> <!-- Show the total amount here -->
+  
+        <div class="cart-items">
+          <h4>Items:</h4>
+          <ul>
+            <li *ngFor="let item of order.cartItems">{{ item.title }} - ₹{{ item.offerPrice }}</li>
+          </ul>
+        </div>
+  
+        <!-- Show the Cancel Button if the order is within 30 minutes -->
+        <button *ngIf="canCancelOrder(order.orderDate)" (click)="cancelOrder(i)" class="cancel-btn">
+          Cancel Order
+        </button>
+  
+        <!-- Disabled cancel button if order is older than 30 minutes -->
+        <button *ngIf="!canCancelOrder(order.orderDate)" class="cancel-btn" disabled>
+          Order Cancelled (30 min limit)
+        </button>
+      </div>
+    </div>
+  </div>
+  

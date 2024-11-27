@@ -1,0 +1,86 @@
+/* Main container styling */
+.address-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .address-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input and textarea styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button styling */
+  .submit-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button:focus {
+    outline: none;
+  }
+  
+  /* address.component.css */
+.cancel-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  

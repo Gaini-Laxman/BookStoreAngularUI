@@ -1,0 +1,14 @@
+<div class="payment-container">
+    <h2>Select Payment Method</h2>
+  
+    <mat-radio-group [(ngModel)]="selectedPaymentOption">
+      <mat-radio-button value="cod">Cash on Delivery (COD)</mat-radio-button>
+      <mat-radio-button value="credit">Credit Card</mat-radio-button>
+    </mat-radio-group>
+  
+    <div *ngIf="selectedPaymentOption === 'cod'">
+      <p>You selected Cash on Delivery (COD). Please provide your delivery address below.</p>
+      <button mat-button (click)="goToAddressForm()">Proceed to Address</button>
+    </div>
+  </div>
+  
