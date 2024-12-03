@@ -1,19 +1,51 @@
-<div class="payment-container">
-    <h2>Select Payment Method</h2>
-  
-    <mat-radio-group [(ngModel)]="selectedPaymentOption">
-      <mat-radio-button value="cod">Cash on Delivery (COD)</mat-radio-button>
+<div class="cart-container">
+  <h2>Shopping Cart</h2>
+
+  <!-- Cart Items List -->
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <mat-card class="cart-item-card">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>{{ item.author }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <!-- Displaying Book Image -->
+      <img mat-card-image [src]="item.image" alt="{{ item.title }}" class="cart-item-image" />
+
+      <mat-card-content>
+        <p><strong>Price: </strong>₹{{ item.offerPrice }}</p>
+      </mat-card-content>
+
+      <!-- Actions Section -->
+      <mat-card-actions>
+        <button mat-button color="warn" (click)="removeFromCart(item.id)">Remove</button>
+      </mat-card-actions>
+    </mat-card>
+  </div> <!-- Closing tag for *ngFor loop -->
+
+  <!-- Total Price and Proceed Button -->
+  <div *ngIf="cartItems.length > 0" class="cart-footer">
+    <p><strong>Total: </strong>₹{{ totalPrice }}</p>
+
+    <!-- Payment Method Selection -->
+    <mat-radio-group [(ngModel)]="paymentMethod" (change)="onPaymentMethodChange()">
       <mat-radio-button value="Online">Online Payment</mat-radio-button>
+      <mat-radio-button value="cod">Cash on Delivery</mat-radio-button>
     </mat-radio-group>
-	
-	<div *ngIf="paymentMethod === 'Online'">
+
+    <!-- Direct Razorpay Payment Link -->
+    <div *ngIf="paymentMethod === 'Online'">
       <a href="https://rzp.io/rzp/BXvTOkpr" target="_blank" mat-raised-button color="primary">Process to Payment</a>
     </div>
+  </div> <!-- Closing tag for cart-footer -->
+
+  <!-- No items message -->
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Your cart is empty!</p>
   </div>
-  
-    <div *ngIf="selectedPaymentOption === 'cod'">
-      <p>You selected Cash on Delivery (COD). Please provide your delivery address below.</p>
-      <button mat-button (click)="goToAddressForm()">Proceed to Address</button>
-    </div>
+
+  <!-- Add More Items Button -->
+  <div *ngIf="cartItems.length > 0" class="add-more-items">
+    <button mat-button color="accent" (click)="addMoreItems()">Add More Items</button>
   </div>
-  
+</div> <!-- Closing tag for cart-container -->

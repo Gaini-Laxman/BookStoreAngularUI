@@ -20,6 +20,8 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { OrderService } from './order-service.service';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule, // Required for Angular Material animations
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
