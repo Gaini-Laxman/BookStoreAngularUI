@@ -3,8 +3,13 @@
   
     <mat-radio-group [(ngModel)]="selectedPaymentOption">
       <mat-radio-button value="cod">Cash on Delivery (COD)</mat-radio-button>
-      <mat-radio-button value="credit">Credit Card</mat-radio-button>
+      <mat-radio-button value="Online">Online Payment</mat-radio-button>
     </mat-radio-group>
+	
+	<div *ngIf="paymentMethod === 'Online'">
+      <a href="https://rzp.io/rzp/BXvTOkpr" target="_blank" mat-raised-button color="primary">Process to Payment</a>
+    </div>
+  </div>
   
     <div *ngIf="selectedPaymentOption === 'cod'">
       <p>You selected Cash on Delivery (COD). Please provide your delivery address below.</p>
